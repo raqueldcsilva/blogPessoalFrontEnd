@@ -14,6 +14,7 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+  [x: string]: any;
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
@@ -38,6 +39,7 @@ export class InicioComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
+    this.authService.refreshToken()
     this.getAllTemas()
     this.getAllPostagens()
   }
