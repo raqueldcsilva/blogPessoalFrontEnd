@@ -14,7 +14,7 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-  [x: string]: any;
+
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
